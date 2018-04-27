@@ -12,11 +12,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-//ROUTER
+// Add the application routes
 require('./app/routing/api-routes.js')(app); 
 require('./app/routing/html-routes.js')(app);
 
-// Starts the server to begin listening
-app.listen(PORT, function () {
-  console.log('App listening on PORT: ' + PORT);
+// Start listening on PORT
+app.listen(PORT, function() {
+  console.log('Friend Finder app is listening on PORT: ' + PORT);
 });
